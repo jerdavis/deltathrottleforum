@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-gb" xml:lang="en-gb">
+<head>
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta http-equiv="content-style-type" content="text/css" />
+<meta http-equiv="content-language" content="en-gb" />
+<meta http-equiv="imagetoolbar" content="no" />
+<meta name="resource-type" content="document" />
+<meta name="distribution" content="global" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="robots" content="noindex" />
+
+<title>The Delta Throttle &bull; View topic - Progress</title>
+
+<link href="styles/prosilver/theme/print.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body id="phpbb">
+<div id="wrap">
+	<a id="top" name="top" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>The Delta Throttle</h1>
+		<p><br /><a href="http://deltathrottle.com/forums/">http://deltathrottle.com/forums/</a></p>
+
+		<h2>Progress</h2>
+		<p><a href="http://deltathrottle.com/forums/viewtopic.php?f=8&amp;t=124">http://deltathrottle.com/forums/viewtopic.php?f=8&amp;t=124</a></p>
+	</div>
+
+	<div id="page-body">
+		<div class="page-number">Page <strong>2</strong> of <strong>2</strong></div>
+		
+			<div class="post">
+				<h3>Re: Progress</h3>
+				<div class="date"><img src="styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />Posted: <strong>Thu May 07, 2015 5:59 am</strong></div>
+				<div class="author">by <strong>M2RiverRat</strong></div>
+				<div class="content">Here is the utility test, it does not seem to be receiving the analog signal, it sees it moving but is not reading the position.  <br />Here is a quick video.<br /><a href="https://www.youtube.com/watch?v=E6IQL5o8KgQ&amp;feature=youtu.be" class="postlink">https://www.youtube.com/watch?v=E6IQL5o8KgQ&amp;feature=youtu.be</a></div>
+			</div>
+			<hr />
+		
+			<div class="post">
+				<h3>Re: Progress</h3>
+				<div class="date"><img src="styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />Posted: <strong>Thu May 07, 2015 6:53 am</strong></div>
+				<div class="author">by <strong>zdayton</strong></div>
+				<div class="content">That looks fine to me. Moving up and down should move just the Z axis, left right should be just X, and forward back should be just Y, and it looks like that was what you got.  If your wiring was wrong you would get a weird combination of both axes, so if you moved forward the output would be diagonal.  But your output looks good so I think it was just not bound properly in Elite.  The only thing is that you should put your hand on the throttle and let it compress to the point where it is holding the weight of your hand, then plug it in.  It looks like you plugged it in with the handle all the way up, which is why your z value never goes above half way.<br /><br />When you bound your controls in Elite, did you rebind all of your controls?  The game doesn't know which input is the joystick and which one is the throttle so you have to rebind everything (just once, not every time you start the game).</div>
+			</div>
+			<hr />
+		
+			<div class="post">
+				<h3>Re: Progress</h3>
+				<div class="date"><img src="styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />Posted: <strong>Thu May 07, 2015 6:52 pm</strong></div>
+				<div class="author">by <strong>M2RiverRat</strong></div>
+				<div class="content">I only rebound the thrusters since that was the only thing I wanted it to control, I will try to rebind all and see if that fixes the issue. <br />I tried without the joystick and everything works fine.  <br />Is there a way to make the throttle be recognized as like joy2 ?</div>
+			</div>
+			<hr />
+		
+			<div class="post">
+				<h3>Re: Progress</h3>
+				<div class="date"><img src="styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />Posted: <strong>Thu May 07, 2015 7:22 pm</strong></div>
+				<div class="author">by <strong>zdayton</strong></div>
+				<div class="content">Windows arranges them alphabetically I think. I haven't found a way to change which one is 1 and which one is 2. The good news is once you have your controls set up you don't have to change them.</div>
+			</div>
+			<hr />
+		
+			<div class="post">
+				<h3>Re: Progress</h3>
+				<div class="date"><img src="styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />Posted: <strong>Thu May 07, 2015 9:03 pm</strong></div>
+				<div class="author">by <strong>Nemesisghost</strong></div>
+				<div class="content"><blockquote><div><cite>M2RiverRat wrote:</cite>The On/Off switch could be good for things like FTL and when your just sitting there, I may do that. Did you just do a toggle switch to the signal wire?</div></blockquote><br /><br />What I did was have a button hooked up to a pin that's tied to an interrupt.  In my case I used pin 7 &amp; interrupt 4.  Then in my code I have a method that gets triggered via that interrupt when I press the button.  The method sets a couple of booleans, which I use in my loop to determine what state I'm in &amp; if I need to re-initialize my zero points on my axis.</div>
+			</div>
+			<hr />
+		
+			<div class="post">
+				<h3>Re: Progress</h3>
+				<div class="date"><img src="styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />Posted: <strong>Thu May 07, 2015 9:19 pm</strong></div>
+				<div class="author">by <strong>M2RiverRat</strong></div>
+				<div class="content">I finally got it to work.  I'm going to look into a way make it so i can turn the thrusters on/off, just cause if your docking of in a asteroid field you don't want to just start going up.  <img src="images/smilies/icon_e_biggrin.gif" alt=":D" title="Very Happy" /></div>
+			</div>
+			<hr />
+		
+	</div>
+
+	<div id="page-footer">
+		<div class="page-number">All times are UTC <br />Page <strong>2</strong> of <strong>2</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Group<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+</html>

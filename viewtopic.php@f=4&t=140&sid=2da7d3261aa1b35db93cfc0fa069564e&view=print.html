@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-gb" xml:lang="en-gb">
+<head>
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta http-equiv="content-style-type" content="text/css" />
+<meta http-equiv="content-language" content="en-gb" />
+<meta http-equiv="imagetoolbar" content="no" />
+<meta name="resource-type" content="document" />
+<meta name="distribution" content="global" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="robots" content="noindex" />
+
+<title>The Delta Throttle &bull; View topic - Software</title>
+
+<link href="styles/prosilver/theme/print.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body id="phpbb">
+<div id="wrap">
+	<a id="top" name="top" accesskey="t"></a>
+
+	<div id="page-header">
+		<h1>The Delta Throttle</h1>
+		<p><br /><a href="http://deltathrottle.com/forums/">http://deltathrottle.com/forums/</a></p>
+
+		<h2>Software</h2>
+		<p><a href="http://deltathrottle.com/forums/viewtopic.php?f=4&amp;t=140">http://deltathrottle.com/forums/viewtopic.php?f=4&amp;t=140</a></p>
+	</div>
+
+	<div id="page-body">
+		<div class="page-number">Page <strong>1</strong> of <strong>1</strong></div>
+		
+			<div class="post">
+				<h3>Software</h3>
+				<div class="date"><img src="styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />Posted: <strong>Fri Jul 24, 2015 2:35 am</strong></div>
+				<div class="author">by <strong>dyst542</strong></div>
+				<div class="content">I've been stuck on getting the software to compile for a while now. I don't have a ton of experience with arduino, but some with C based languages.<br /><br />Here's the error I've been getting on compile<br /><br /><dl class="codebox"><dt>Code: <a href="viewtopic.php@f=4&amp;t=140&amp;sid=2da7d3261aa1b35db93cfc0fa069564e&amp;view=print.html#" onclick="selectCode(this); return false;">Select all</a></dt><dd><code>DeltaThrottle:2: error: 'JoyState_t' does not name a type<br />DeltaThrottle.ino: In function 'void setup()':<br />DeltaThrottle:54: error: 'joySt' was not declared in this scope<br />DeltaThrottle.ino: In function 'void loop()':<br />DeltaThrottle:198: error: 'joySt' was not declared in this scope<br />DeltaThrottle:220: error: 'Joystick' was not declared in this scope<br /></code></dd></dl><br /><br />Thoughts?</div>
+			</div>
+			<hr />
+		
+			<div class="post">
+				<h3>Re: Software</h3>
+				<div class="date"><img src="styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" />Posted: <strong>Fri Jul 24, 2015 2:32 pm</strong></div>
+				<div class="author">by <strong>jeruw</strong></div>
+				<div class="content">The sketch currently up on GitHub I believe is built against Arduino IDE 1.0.6. There are some other discussions about this in various threads on the forums, and at least one person has forked the code and patched it for newer versions of the Arduino IDE. For now, the easiest way to get going is probably to download the 1.0.6 IDE from here: <!-- m --><a class="postlink" href="https://www.arduino.cc/en/Main/OldSoftwareReleases#previous">https://www.arduino.cc/en/Main/OldSoftw ... s#previous</a><!-- m --><br /><br />Make sure you follow the instructions for copying certain components from the Delta Throttle code to the right directories in the IDE as well.</div>
+			</div>
+			<hr />
+		
+	</div>
+
+	<div id="page-footer">
+		<div class="page-number">All times are UTC <br />Page <strong>1</strong> of <strong>1</strong></div>
+		<div class="copyright">Powered by phpBB&reg; Forum Software &copy; phpBB Group<br />https://www.phpbb.com/</div>
+	</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,440 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-gb" xml:lang="en-gb">
+<head>
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta http-equiv="content-style-type" content="text/css" />
+<meta http-equiv="content-language" content="en-gb" />
+<meta http-equiv="imagetoolbar" content="no" />
+<meta name="resource-type" content="document" />
+<meta name="distribution" content="global" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+
+<title>The Delta Throttle &bull; View topic - Thoughts on redesign for Hall Effect sensors</title>
+
+<link rel="alternate" type="application/atom+xml" title="Feed - The Delta Throttle" href="http://deltathrottle.com/forums/feed.php" /><link rel="alternate" type="application/atom+xml" title="Feed - New Topics" href="http://deltathrottle.com/forums/feed.php?mode=topics" /><link rel="alternate" type="application/atom+xml" title="Feed - Forum - Discussion" href="http://deltathrottle.com/forums/feed.php?f=4" /><link rel="alternate" type="application/atom+xml" title="Feed - Topic - Thoughts on redesign for Hall Effect sensors" href="http://deltathrottle.com/forums/feed.php?f=4&amp;t=110" />
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+
+<script type="text/javascript">
+// <![CDATA[
+	var jump_page = 'Enter the page number you wish to go to:';
+	var on_page = '1';
+	var per_page = '';
+	var base_url = '';
+	var style_cookie = 'phpBBstyle';
+	var style_cookie_settings = '; path=/; domain=.deltathrottle.com';
+	var onload_functions = new Array();
+	var onunload_functions = new Array();
+
+	
+
+	/**
+	* Find a member
+	*/
+	function find_username(url)
+	{
+		popup(url, 760, 570, '_usersearch');
+		return false;
+	}
+
+	/**
+	* New function for handling multiple calls to window.onload and window.unload by pentapenguin
+	*/
+	window.onload = function()
+	{
+		for (var i = 0; i < onload_functions.length; i++)
+		{
+			eval(onload_functions[i]);
+		}
+	};
+
+	window.onunload = function()
+	{
+		for (var i = 0; i < onunload_functions.length; i++)
+		{
+			eval(onunload_functions[i]);
+		}
+	};
+
+// ]]>
+</script>
+<script type="text/javascript" src="styles/prosilver/template/styleswitcher.js"></script>
+<script type="text/javascript" src="styles/prosilver/template/forum_fn.js"></script>
+
+<link href="styles/prosilver/theme/print.css" rel="stylesheet" type="text/css" media="print" title="printonly" />
+<link href="style.php@id=1&amp;lang=en&amp;sid=2da7d3261aa1b35db93cfc0fa069564e.css" rel="stylesheet" type="text/css" media="screen, projection" />
+
+<link href="styles/prosilver/theme/normal.css" rel="stylesheet" type="text/css" title="A" />
+<link href="styles/prosilver/theme/medium.css" rel="alternate stylesheet" type="text/css" title="A+" />
+<link href="styles/prosilver/theme/large.css" rel="alternate stylesheet" type="text/css" title="A++" />
+
+
+
+</head>
+
+<body id="phpbb" class="section-viewtopic ltr">
+
+<div id="wrap">
+	<a id="top" name="top" accesskey="t"></a>
+	<div id="page-header">
+		<div class="headerbar">
+			<div class="inner"><span class="corners-top"><span></span></span>
+
+			<div id="site-description">
+				<a href="index.php@sid=2da7d3261aa1b35db93cfc0fa069564e.html" title="Board index" id="logo"></a>
+				<h1>The Delta Throttle</h1>
+				<p></p>
+				<p class="skiplink"><a href="viewtopic.php@p=264&amp;sid=2da7d3261aa1b35db93cfc0fa069564e.html#start_here">Skip to content</a></p>
+			</div>
+
+		
+			<div id="search-box">
+				<form action="search.php@sid=2da7d3261aa1b35db93cfc0fa069564e.html" method="get" id="search">
+				<fieldset>
+					<input name="keywords" id="keywords" type="text" maxlength="128" title="Search for keywords" class="inputbox search" value="Search…" onclick="if(this.value=='Search…')this.value='';" onblur="if(this.value=='')this.value='Search…';" />
+					<input class="button2" value="Search" type="submit" /><br />
+					<a href="search.php@sid=2da7d3261aa1b35db93cfc0fa069564e.html" title="View the advanced search options">Advanced search</a> <input type="hidden" name="sid" value="2da7d3261aa1b35db93cfc0fa069564e" />
+
+				</fieldset>
+				</form>
+			</div>
+		
+
+			<span class="corners-bottom"><span></span></span></div>
+		</div>
+
+		<div class="navbar">
+			<div class="inner"><span class="corners-top"><span></span></span>
+
+			<ul class="linklist navlinks">
+				<li class="icon-home"><a href="index.php@sid=2da7d3261aa1b35db93cfc0fa069564e.html" accesskey="h">Board index</a>  <strong>&#8249;</strong> <a href="viewforum.php@f=1&amp;sid=2da7d3261aa1b35db93cfc0fa069564e.html">Delta Throttle</a> <strong>&#8249;</strong> <a href="viewforum.php@f=4&amp;sid=2da7d3261aa1b35db93cfc0fa069564e.html">Discussion</a></li>
+
+				<li class="rightside"><a href="viewtopic.php@p=264&amp;sid=2da7d3261aa1b35db93cfc0fa069564e.html#" onclick="fontsizeup(); return false;" onkeypress="return fontsizeup(event);" class="fontsize" title="Change font size">Change font size</a></li>
+
+				<li class="rightside"><a href="viewtopic.php@f=4&amp;t=110&amp;sid=2da7d3261aa1b35db93cfc0fa069564e&amp;view=print.html" title="Print view" accesskey="p" class="print">Print view</a></li>
+			</ul>
+
+			
+
+			<ul class="linklist rightside">
+				<li class="icon-faq"><a href="faq.php@sid=2da7d3261aa1b35db93cfc0fa069564e.html" title="Frequently Asked Questions">FAQ</a></li>
+				<li class="icon-register"><a href="ucp.php@mode=register&amp;sid=2da7d3261aa1b35db93cfc0fa069564e.html">Register</a></li>
+					<li class="icon-logout"><a href="ucp.php@mode=login&amp;sid=2da7d3261aa1b35db93cfc0fa069564e.html" title="Login" accesskey="x">Login</a></li>
+				
+			</ul>
+
+			<span class="corners-bottom"><span></span></span></div>
+		</div>
+
+	</div>
+
+	<a name="start_here"></a>
+	<div id="page-body">
+		
+<h2><a href="viewtopic.php@f=4&amp;t=110&amp;sid=2da7d3261aa1b35db93cfc0fa069564e.html">Thoughts on redesign for Hall Effect sensors</a></h2>
+<!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
+
+<div class="topic-actions">
+
+	<div class="buttons">
+	
+		<div class="reply-icon"><a href="posting.php@mode=reply&amp;f=4&amp;t=110&amp;sid=2da7d3261aa1b35db93cfc0fa069564e.html" title="Post a reply"><span></span>Post a reply</a></div>
+	
+	</div>
+
+	
+		<div class="search-box">
+			<form method="get" id="topic-search" action="search.php@sid=2da7d3261aa1b35db93cfc0fa069564e.html">
+			<fieldset>
+				<input class="inputbox search tiny"  type="text" name="keywords" id="search_keywords" size="20" value="Search this topic…" onclick="if(this.value=='Search this topic…')this.value='';" onblur="if(this.value=='')this.value='Search this topic…';" />
+				<input class="button2" type="submit" value="Search" />
+				<input type="hidden" name="t" value="110" />
+<input type="hidden" name="sf" value="msgonly" />
+<input type="hidden" name="sid" value="2da7d3261aa1b35db93cfc0fa069564e" />
+
+			</fieldset>
+			</form>
+		</div>
+	
+		<div class="pagination">
+			4 posts
+			 &bull; Page <strong>1</strong> of <strong>1</strong>
+		</div>
+	
+
+</div>
+<div class="clear"></div>
+
+
+	<div id="p259" class="post bg2">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			
+				<ul class="profile-icons">
+					<li class="quote-icon"><a href="posting.php@mode=quote&amp;f=4&amp;p=259&amp;sid=2da7d3261aa1b35db93cfc0fa069564e.html" title="Reply with quote"><span>Reply with quote</span></a></li>
+				</ul>
+			
+
+			<h3 class="first"><a href="viewtopic.php@p=264&amp;sid=2da7d3261aa1b35db93cfc0fa069564e.html#p259">Thoughts on redesign for Hall Effect sensors</a></h3>
+			<p class="author"><a href="viewtopic.php@p=259&amp;sid=2da7d3261aa1b35db93cfc0fa069564e.html#p259"><img src="styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" /></a>by <strong><a href="memberlist.php@mode=viewprofile&amp;u=82&amp;sid=2da7d3261aa1b35db93cfc0fa069564e.html">jeruw</a></strong> &raquo; Sat Mar 21, 2015 4:42 pm </p>
+
+			
+
+			<div class="content">One of the big problems I ran into in building this with aluminum is handling the potentiometer D shaft. I'm really new at machining and I was having a hell of a time finding information on how to reasonably create a D profile hole in an aluminum shaft. With the 3d printed part you just print it as a D. Boring out a D profile in an aluminum shaft is not a trivial task. I hacked my way around it by using a set screw, but it's not ideal.<br /><br />This, combined with the possible issues of using the potentiometer shaft as a load bearing component, had me thinking of other ways to handle this. I'd seen some information about hall effect sensors and have been researching those trying to find an affordable solution. Many of those chips, particularly those meant as absolute rotary encoders, aren't inexpensive and the breakout board or development boards with them installed are either a DIY project or around $20 each. That'd be a pretty big cost jump.<br /><br />But today I came across this: <!-- m --><a class="postlink" href="http://www.mycockpit.org/forums/showthread.php?t=22267">http://www.mycockpit.org/forums/showthread.php?t=22267</a><!-- m --><br /><br />This guy is replacing a potentiometer with a simple hall effect encoder chip (cost around $1.25 each) and two magnets mounted to the shaft. It's a simple 3 pin connection like a potentiometer and a simple solution, no more complicated board really required. It covers 180 degrees of rotation, far more than the around 90 degrees required by a delta throttle pivot arm. <br /><br />So my new design will likely be a solid 3/8&quot; shaft with a 3/8&quot; x 1/4&quot; bronze sleeve bearing in each upright for the shaft to ride on. The pivot arm will bolt down securing the right side. a 3/8&quot; ID x 1/2&quot; OD x 3/4&quot; LG sleeve bearing will be placed on the shaft for the spring to ride on. Even though this exceeds the maximum shaft OD for the springs there's plenty of clearance for our required range of motion. the 3/8&quot; shaft will extend on the sensor side by 1/4&quot;. I'll machine my own shaft collar to secure this side including pockets for 2 1/4&quot;x1/4&quot; neodymium magnets.<br /><br />With all the extra bearings, sensor and magnets this will be a bit more than a potentiometer's cost, but not by a lot and will give a secure and smooth operation with a high degree of accuracy and little to wear out.<br /><br />Thoughts?</div>
+
+			
+
+		</div>
+
+		
+			<dl class="postprofile" id="profile259">
+			<dt>
+				<a href="memberlist.php@mode=viewprofile&amp;u=82&amp;sid=2da7d3261aa1b35db93cfc0fa069564e.html">jeruw</a>
+			</dt>
+
+			
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 80</dd><dd><strong>Joined:</strong> Tue Feb 17, 2015 3:10 pm</dd>
+
+		</dl>
+	
+
+		<div class="back2top"><a href="viewtopic.php@p=264&amp;sid=2da7d3261aa1b35db93cfc0fa069564e.html#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+
+	<div id="p264" class="post bg1">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			
+				<ul class="profile-icons">
+					<li class="quote-icon"><a href="posting.php@mode=quote&amp;f=4&amp;p=264&amp;sid=2da7d3261aa1b35db93cfc0fa069564e.html" title="Reply with quote"><span>Reply with quote</span></a></li>
+				</ul>
+			
+
+			<h3 ><a href="viewtopic.php@p=264&amp;sid=2da7d3261aa1b35db93cfc0fa069564e.html#p264">Re: Thoughts on redesign for Hall Effect sensors</a></h3>
+			<p class="author"><a href="viewtopic.php@p=264&amp;sid=2da7d3261aa1b35db93cfc0fa069564e.html#p264"><img src="styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" /></a>by <strong><a href="memberlist.php@mode=viewprofile&amp;u=2&amp;sid=2da7d3261aa1b35db93cfc0fa069564e.html" style="color: #AA0000;" class="username-coloured">zdayton</a></strong> &raquo; Sat Mar 21, 2015 8:52 pm </p>
+
+			
+
+			<div class="content">To make a D shaped hole in aluminum you need a broach.  Basically shoving a D shaped cutter through a hole.  In this case I think you would be better to use a woodruff key and a set screw.  <!-- m --><a class="postlink" href="http://www.mcmaster.com/#machine-keys/=werl1o">http://www.mcmaster.com/#machine-keys/=werl1o</a><!-- m --> <br /><br />I was actually doing some experiments with an Allegro hall effect rotation sensor.  It was SOC, so just an i2c output and totally programmable.  It looked really cool but I could never get the Allegro people to send me the full data sheet.  They totally blew me off, maybe just because the quantity i wanted wasnt worth their time, i don't know.  Here are pics of my test rig though.<br /><br /><img src="http://i.imgur.com/bplFb31.jpg" alt="Image" /><br /><br /><img src="http://i.imgur.com/l2F7ejS.jpg" alt="Image" /><br /><br />I have gone back and forth on hall effect sensors a little bit.  They are obviously associated with higher quality in people's minds, but to be honest i'm not sure if that is true.  There are definitely some positives.  They are non contact so there is no wear.  But s high quality pot has 2% linearity, infinite resolution, and a cycle life of 2 million cycles.  And they are much easier to implement.</div>
+
+			
+
+		</div>
+
+		
+			<dl class="postprofile" id="profile264">
+			<dt>
+				<a href="memberlist.php@mode=viewprofile&amp;u=2&amp;sid=2da7d3261aa1b35db93cfc0fa069564e.html" style="color: #AA0000;" class="username-coloured">zdayton</a>
+			</dt>
+
+			<dd>Site Admin</dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 81</dd><dd><strong>Joined:</strong> Wed Dec 24, 2014 6:20 am</dd>
+
+		</dl>
+	
+
+		<div class="back2top"><a href="viewtopic.php@p=264&amp;sid=2da7d3261aa1b35db93cfc0fa069564e.html#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+
+	<div id="p265" class="post bg2">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			
+				<ul class="profile-icons">
+					<li class="quote-icon"><a href="posting.php@mode=quote&amp;f=4&amp;p=265&amp;sid=2da7d3261aa1b35db93cfc0fa069564e.html" title="Reply with quote"><span>Reply with quote</span></a></li>
+				</ul>
+			
+
+			<h3 ><a href="viewtopic.php@p=264&amp;sid=2da7d3261aa1b35db93cfc0fa069564e.html#p265">Re: Thoughts on redesign for Hall Effect sensors</a></h3>
+			<p class="author"><a href="viewtopic.php@p=265&amp;sid=2da7d3261aa1b35db93cfc0fa069564e.html#p265"><img src="styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" /></a>by <strong><a href="memberlist.php@mode=viewprofile&amp;u=82&amp;sid=2da7d3261aa1b35db93cfc0fa069564e.html">jeruw</a></strong> &raquo; Sat Mar 21, 2015 9:20 pm </p>
+
+			
+
+			<div class="content">Certainly easier for a 3d printed or other plastic design. Were you able to get much working or did the lack of data sheets hold things up? I was looking at a number of absolute encoders that looked a bit like that. I couldn't find an affordable ready-to-go board though and am not quite ready to take on board design and surface mount soldering <img src="images/smilies/icon_e_smile.gif" alt=":)" title="Smile" />.<br /><br />I'm excited by the simpler design. It doesn't have the ability to encode more than 180 degrees of rotation, but for this application it seems like we don't need more than 90 degrees. I'm assuming from the limited info I've seen and my limited understanding that connected to the 10bit ADC on the Pro Micro the resolution should be pretty high as well. Not the highest a hall effect sensor can provide, possibly less than a high quality pot from what you're saying. I think I'll give it a try though. It will only set me back around $20 for the magnets and sensors from digikey. If it works it'll make my build a lot easier.</div>
+
+			
+
+		</div>
+
+		
+			<dl class="postprofile" id="profile265">
+			<dt>
+				<a href="memberlist.php@mode=viewprofile&amp;u=82&amp;sid=2da7d3261aa1b35db93cfc0fa069564e.html">jeruw</a>
+			</dt>
+
+			
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 80</dd><dd><strong>Joined:</strong> Tue Feb 17, 2015 3:10 pm</dd>
+
+		</dl>
+	
+
+		<div class="back2top"><a href="viewtopic.php@p=264&amp;sid=2da7d3261aa1b35db93cfc0fa069564e.html#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+
+	<div id="p267" class="post bg1">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<div class="postbody">
+			
+				<ul class="profile-icons">
+					<li class="quote-icon"><a href="posting.php@mode=quote&amp;f=4&amp;p=267&amp;sid=2da7d3261aa1b35db93cfc0fa069564e.html" title="Reply with quote"><span>Reply with quote</span></a></li>
+				</ul>
+			
+
+			<h3 ><a href="viewtopic.php@p=264&amp;sid=2da7d3261aa1b35db93cfc0fa069564e.html#p267">Re: Thoughts on redesign for Hall Effect sensors</a></h3>
+			<p class="author"><a href="viewtopic.php@p=267&amp;sid=2da7d3261aa1b35db93cfc0fa069564e.html#p267"><img src="styles/prosilver/imageset/icon_post_target.gif" width="11" height="9" alt="Post" title="Post" /></a>by <strong><a href="memberlist.php@mode=viewprofile&amp;u=2&amp;sid=2da7d3261aa1b35db93cfc0fa069564e.html" style="color: #AA0000;" class="username-coloured">zdayton</a></strong> &raquo; Sat Mar 21, 2015 9:35 pm </p>
+
+			
+
+			<div class="content">Encoders are really expensive.  It would cost a fortune to get encoders with the same resolution as the potentiometer and ADC.  For the hall effect sensor, i got it working and detecting rotation, but at poor resolution. I need the full data sheet to know how to properly program the chip and get the correct resolution, the part I am missing is the register descriptions for changing all the settings and stuff.</div>
+
+			
+
+		</div>
+
+		
+			<dl class="postprofile" id="profile267">
+			<dt>
+				<a href="memberlist.php@mode=viewprofile&amp;u=2&amp;sid=2da7d3261aa1b35db93cfc0fa069564e.html" style="color: #AA0000;" class="username-coloured">zdayton</a>
+			</dt>
+
+			<dd>Site Admin</dd>
+
+		<dd>&nbsp;</dd>
+
+		<dd><strong>Posts:</strong> 81</dd><dd><strong>Joined:</strong> Wed Dec 24, 2014 6:20 am</dd>
+
+		</dl>
+	
+
+		<div class="back2top"><a href="viewtopic.php@p=264&amp;sid=2da7d3261aa1b35db93cfc0fa069564e.html#wrap" class="top" title="Top">Top</a></div>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<hr class="divider" />
+
+	<form id="viewtopic" method="post" action="viewtopic.php@f=4&amp;t=110&amp;sid=2da7d3261aa1b35db93cfc0fa069564e.html">
+
+	<fieldset class="display-options" style="margin-top: 0; ">
+		
+		<label>Display posts from previous: <select name="st" id="st"><option value="0" selected="selected">All posts</option><option value="1">1 day</option><option value="7">7 days</option><option value="14">2 weeks</option><option value="30">1 month</option><option value="90">3 months</option><option value="180">6 months</option><option value="365">1 year</option></select></label>
+		<label>Sort by <select name="sk" id="sk"><option value="a">Author</option><option value="t" selected="selected">Post time</option><option value="s">Subject</option></select></label> <label><select name="sd" id="sd"><option value="a" selected="selected">Ascending</option><option value="d">Descending</option></select> <input type="submit" name="sort" value="Go" class="button2" /></label>
+		
+	</fieldset>
+
+	</form>
+	<hr />
+
+
+<div class="topic-actions">
+	<div class="buttons">
+	
+		<div class="reply-icon"><a href="posting.php@mode=reply&amp;f=4&amp;t=110&amp;sid=2da7d3261aa1b35db93cfc0fa069564e.html" title="Post a reply"><span></span>Post a reply</a></div>
+	
+	</div>
+
+	
+		<div class="pagination">
+			4 posts
+			 &bull; Page <strong>1</strong> of <strong>1</strong>
+		</div>
+	
+</div>
+
+
+	<p></p><p><a href="viewforum.php@f=4&amp;sid=2da7d3261aa1b35db93cfc0fa069564e.html" class="left-box left" accesskey="r">Return to Discussion</a></p>
+
+	<form method="post" id="jumpbox" action="http://173.236.165.188/forums/viewforum.php?sid=2da7d3261aa1b35db93cfc0fa069564e" onsubmit="if(this.f.value == -1){return false;}">
+
+	
+		<fieldset class="jumpbox">
+	
+			<label for="f" accesskey="j">Jump to:</label>
+			<select name="f" id="f" onchange="if(this.options[this.selectedIndex].value != -1){ document.forms['jumpbox'].submit() }">
+			
+				<option value="-1">Select a forum</option>
+			<option value="-1">------------------</option>
+				<option value="1">Delta Throttle</option>
+			
+				<option value="4" selected="selected">&nbsp; &nbsp;Discussion</option>
+			
+				<option value="5">&nbsp; &nbsp;Feedback</option>
+			
+				<option value="8">&nbsp; &nbsp;Build progress and showcase</option>
+			
+				<option value="3">Games</option>
+			
+				<option value="6">&nbsp; &nbsp;Star Citizen</option>
+			
+				<option value="7">&nbsp; &nbsp;Elite:Dangerous</option>
+			
+			</select>
+			<input type="submit" value="Go" class="button2" />
+		</fieldset>
+	</form>
+
+
+	<h3>Who is online</h3>
+	<p>Users browsing this forum: No registered users and 0 guests</p>
+</div>
+
+<div id="page-footer">
+
+	<div class="navbar">
+		<div class="inner"><span class="corners-top"><span></span></span>
+
+		<ul class="linklist">
+			<li class="icon-home"><a href="index.php@sid=2da7d3261aa1b35db93cfc0fa069564e.html" accesskey="h">Board index</a></li>
+				
+			<li class="rightside"><a href="memberlist.php@mode=leaders&amp;sid=2da7d3261aa1b35db93cfc0fa069564e.html">The team</a> &bull; <a href="ucp.php@mode=delete_cookies&amp;sid=2da7d3261aa1b35db93cfc0fa069564e.html">Delete all board cookies</a> &bull; All times are UTC </li>
+		</ul>
+
+		<span class="corners-bottom"><span></span></span></div>
+	</div>
+
+	<div class="copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>&reg; Forum Software &copy; phpBB Group
+		
+	</div>
+</div>
+
+</div>
+
+<div>
+	<a id="bottom" name="bottom" accesskey="z"></a>
+	<img src="cron.php@cron_type=tidy_search&amp;sid=2da7d3261aa1b35db93cfc0fa069564e" width="1" height="1" alt="cron" />
+</div>
+
+</body>
+</html>
